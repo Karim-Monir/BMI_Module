@@ -20,8 +20,10 @@ class _FirstScreenState extends State<FirstScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
-          'BMI CALCULATOR',
+        title: Center(
+          child: Text(
+            'BMI CALCULATOR',
+          ),
         ),
       ),
       body: Column(
@@ -296,9 +298,16 @@ class _FirstScreenState extends State<FirstScreen> {
             ),
           ),
           Container(
-            color: Colors.red,
             height: 50.0,
             width: double.infinity,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(10.0),
+                  topRight: Radius.circular(10.0
+                  )
+              ),
+              color: Colors.red,
+            ),
             child: TextButton(
               onPressed: () {
                 double result = weight / pow(height / 100, 2);
